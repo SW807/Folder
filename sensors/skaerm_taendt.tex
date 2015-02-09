@@ -1,0 +1,39 @@
+\section{Skærm tændt}
+
+\subsection{Sensor}
+
+\begin{description}
+\item[Kan vi få fat i data?]
+Ja, det er muligt at se om skærmen tændes eller slukkes.
+
+\item[Hvilke data giver sensoren?]
+Om skærmen er tændt eller slukket, samt notifikation om hvornår dette sker.
+
+\item[Er der begrænsninger?]
+Nej.
+
+\end{description}
+
+\subsection{Analyse}
+\begin{description}
+\item[Har vi data nok?]
+Ja.
+
+\item[Hvilken data skal benyttes?]
+Der skal logges hver gang skærm tændes/slukkes, og hvor ofte skærmen var tændt.
+
+\item[Hvad er formål med analysen?]
+At se hvor ofte mobilen tændes/slukkes og i hvor lang tid.
+På denne måde kan der holdes øje med om mobilen bliver ignoreret (lav frekvens), eller om der holdes øje med noget bestemt (ved høj frekvens og lav tændetid).
+
+Den kunne også kombineres med fx. accelerometer, så der kun måles rystelser så længe skærmen er tændt (antager at den er i hånden på bruger).
+
+Kilde: \url{https://gupea.ub.gu.se/handle/2077/28245}
+
+\item[Hvordan kan det visualiseres?]
+
+\end{description}
+
+\subsection{Teknisk}
+\url{http://developer.android.com/reference/android/content/Intent.html#ACTION_SCREEN_OFF}\\
+\url{http://developer.android.com/reference/android/view/Display.html#getState()}
