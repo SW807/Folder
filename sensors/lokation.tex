@@ -1,0 +1,33 @@
+\section{Lokation}
+Kilde: \url{https://developer.android.com/training/location/index.html}
+
+\subsection{Sensor}
+
+\begin{description}
+\item[Kan vi få fat i data?]
+Ja, der kan anmodes om lokation på et væld af måder; seneste lokation, anmode enkelt opdatering, anmode flere opdateringer.
+Dette afhænger af rettigheder til brug af henholdsvis grov og/eller fin lokation.
+\item[Hvilke data giver sensoren?]
+Breddegrad, længdegrad, præcision i meter, højde i meter, retning i grader, dato-tidsstempel, hastighed i m/s, leverandør (GPS el. netværk).
+\item[Er der begrænsninger?]
+Opdateringer afhænger af andre apps' anmodninger, samt forbindelse(r).
+Det er muligt at sætte minimum og maksimum tid, men kan ikke garanteres at minimum overholdes.
+Hyppige opdateringer er strømkrævende.
+\end{description}
+
+\subsection{Analyse}
+\begin{description}
+\item[Har vi data nok?]
+Sikkert.
+\item[Hvilken data skal benyttes?]
+Breddegrad, længdegrad, præcision og datotidsstempel.
+Højde og hastighed er mindre anvendeligt, og er mere usikre (både ift. præcision og om der overhovedet er en værdi).
+\item[Hvad er formål med analysen?]
+Hvor meget man bevæger sig; hvor meget er man udenfor hjem/arbejde? Hvor meget opholder man sig hjemme? Hvor er man oftest (nøgle-lokationer, fx. venner, familie, værtshus)?
+\item[Hvordan kan det visualiseres?]
+
+\end{description}
+
+\subsection{Teknisk}
+Google Play Services (foretrukket) eller Android framework location APIs.
+\url{http://developer.android.com/reference/android/location/LocationManager.html}
