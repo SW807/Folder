@@ -2,23 +2,36 @@
 \subsection{Sensor}
 \begin{description}[style=nextline]
 	\item[Kan vi få fat i data?]
-	
+	Ja, i smartphones findes der mikrofoner, der muliggør indsamling af lyd data.
+	Derudover findes der et MediaRecorder bibliotek til Android der gør det nemt at optage lyd gennem mikrofonen. Dette kan også sættes op til at optage mens en telefonsamtale er i gang, så patienten der har programmet installeret får sin stemme optaget.
+	Derudover er der den enkle løsning at patienten optager sig selv.
 	\item[Er der begrænsninger]
+	Begrænsningen ligger i telefonsamtale perspektivet, da hvis man ser på Android telefoner generelt er det kun patientens stemme man kan optage, og således ikke den han ringer med.
 
 	\item[Hvilke data gives der?]
+	En lyd fil der kan bruges til efterfølgende analyse af bl.a. amplitude og pitch.
 
 \end{description}
 
 \subsection{Analyse}
 \begin{description}[style=nextline]
 	\item[Har vi data nok?]
-
+	Der kan skaffes rigeligt med data fra patienten selv i form af optagelser og telefonsamtaler. Problematikken ligger i at skaffe data fra en mængde af patienter med og uden psykiske lidelser, for at få en præcis classifier til brug af algoritmer beskrevet i \citep{6168572,6346375}.
+	
 	\item[Hvilke data skal benyttes?]
-
+	Korte lydfiler kan bruges. Til detektering af Parkinson syge har \citep{6168572} fundet en akkurat algoritme. Denne kræver at man har en mængde af personer hvor en del af disse har Parkinson syge, og en del af dem ikke har, hvor man så bruger korte lydoptagelser af disse personer til algoritmen.
+	
 	\item[Formål med analysen]
+	Analysen kan have forskellige orienteringer. Et eksempel er at følge Parkinson detekterings algoritmen \citep{6168572}, hvor der kan detekteres hvordan personer med Parkinson syge er ringere til at snakke.
+	En anden mulighed er at forske nærmere i at bruge stemmeanalyse til at diagnosticere sygdomme såsom maniodepression \citep{6346375}, eller andre sygdomme der har effekt på stemmen.
 
 	\item[Idé til visualisering]
-
-	\item[Oprids a fremgangsmåde]
+	Man kunne eksempelvis lave en graf med pitch eller amplitude over tid, for at se om ens stemme udvikler sig på usædvanlig vis (snakker højt/hurtigt).
+	Et alternativ er et simpelt binært resultat til at afgøre om man har en given sygdom eller ej, evt. med et dertilhørende konfidensnivau.
+	\item[Oprids fremgangsmåde]
+	For parkinson syge, anskaf en mængde af træningsdata, byg classifier, brug denne til detektering af parkinsonsyge.
+	
+	Derudover kan mani muligvis detekteres ved at måle på amplituden og pitchen, men kræver mere forskning på området \citep{6346375}.
+	Dog har de haft gode resultater med individuelle patienter, men det viser sig at pitch ikke kan bruges generelt set til detektering af mani, det er noget man skal vurdere fra patient til patient.
 	
 \end{description}

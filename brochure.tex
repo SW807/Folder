@@ -1,0 +1,124 @@
+\documentclass[a4paper,twoside,landscape]{book}
+
+\usepackage{times}
+\usepackage{courier}
+\usepackage{helvet}
+\usepackage[margin=1in,top=1in,bottom=1in]{geometry}
+\usepackage[colorlinks,
+            linkcolor=black,
+            urlcolor=black,
+            plainpages=false,
+            pdfpagelabels=true]{hyperref}
+\usepackage{fancybox}
+\usepackage{color}
+\usepackage{flowfram}
+
+\newcommand{\sty}[1]{\textsf{#1}}
+\newcommand{\env}[1]{\textsf{#1}}
+\newcommand{\cmdname}[1]{\texttt{\symbol{92}#1}}
+\newcommand{\meta}[1]{\textnormal{\textless\textit{#1}\textgreater}}
+
+\newlength{\leftwidth}
+\newlength{\rightwidth}
+
+\computeleftedgeodd{\leftwidth}
+\setlength{\leftwidth}{-\leftwidth}
+\addtolength{\leftwidth}{0.4\textwidth}
+\setlength{\rightwidth}{\paperwidth}
+\addtolength{\rightwidth}{-\leftwidth}
+\vtwotone[1]{\leftwidth}{magenta}{backleft}{\rightwidth}{[cmyk]{0,0.48,0,0}}{backright}
+
+\vtwotone[none]{\rightwidth}{[cmyk]{0,0.48,0,0}}{lastbackright}{\leftwidth}{magenta}{lastbackleft}
+
+\vtwotonetop[odd]{1cm}{\leftwidth}{magenta}{oddtopleft}{\rightwidth}{[cmyk]{0,0.48,0,0}}{oddtopright}
+\vtwotonetop[even]{1cm}{\rightwidth}{[cmyk]{0,0.48,0,0}}{eventopleft}{\leftwidth}{magenta}{eventopright}
+
+\setlength{\marginparwidth}{2cm}
+
+\newflowframe{0.6\textwidth}{\textheight}{0pt}{0pt}[main]
+\newdynamicframe{0.38\textwidth}{\textheight}{0.62\textwidth}{0pt}[chaphead]
+
+\setflowframe*{main}{evenx=0.4\textwidth}
+\setdynamicframe*{chaphead}{evenx=0pt}
+
+\setflowframe*{main}{margin=inner}
+
+\dfchaphead*{chaphead}
+
+\appenddfminitoc*{chaphead}
+
+
+\renewcommand{\DFchapterstyle}[1]{%
+\raggedright\sffamily\bfseries\Huge\color{blue}#1\par
+}
+
+\renewcommand{\DFschapterstyle}[1]{\raggedright\sffamily\bfseries\Huge\color{blue} #1\par
+}
+
+
+\makethumbtabs{2in}
+\enableminitoc
+
+\pagestyle{plain}
+
+\makedfheaderfooter
+
+\newlength{\xoffset}
+\computerightedgeodd{\xoffset}
+\addtolength{\xoffset}{-2cm}
+\newlength{\yoffset}
+\computebottomedge{\yoffset}
+
+\newcommand{\footstyle}[1]{\bfseries\LARGE #1}
+
+
+\setdynamicframe*{footer}{oddx=\xoffset,y=\yoffset,width=2cm,height=2cm,
+backcolor=blue,textcolor=white,style=footstyle,pages=none}
+
+
+\computeleftedgeeven{\xoffset}
+\setdynamicframe*{footer}{evenx=\xoffset}
+
+\begin{document}
+\ffswapoddeven*{main}% swap odd and even position of frame for the title page
+\dfswapoddeven*{chaphead}
+\title{Mobil telefon logning}
+\author{SW807 \& SW808}
+\date{}
+\pagenumbering{alph}
+\maketitle
+
+\cleardoublepage
+\setstaticframe*{backleft}{pages=none}
+\setstaticframe*{backright}{pages=none}
+
+\frontmatter
+\setdynamicframe*{footer}{pages=all}
+
+\clearpage
+\dfswapoddeven*{chaphead}
+\ffswapoddeven*{main}% swap back again
+
+\mainmatter
+\section*{Introduktion}
+\pagenumbering{arabic}
+
+The \sty{flowfram} package is designed to enable you to create
+frames in a document such that the
+contents of the \env{document} environment flow from one
+frame to the next in the order that they were defined.
+This is useful for creating posters\marginpar{A marginal note}
+or magazines or any other form of document that does not
+conform to the standard one or two column layout.
+
+This document has \themaxflow\ flow
+\ifthenelse{\value{maxflow}=1}{frame}{frames}, \themaxstatic\ static
+\ifthenelse{\value{maxstatic}=1}{frame}{frames} and
+\themaxdynamic\ dynamic \ifthenelse{\value{maxdynamic}=1}{frame}{frames}.
+
+
+\finishthispage\mbox{}
+\setdynamiccontents*{chaphead}{}
+\setdynamicframe*{footer}{pages=none}
+\setstaticframe*{lastbackleft,lastbackright}{pages=even}
+\end{document}
