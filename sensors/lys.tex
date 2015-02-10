@@ -1,0 +1,38 @@
+\section{Lyssensor}
+
+\subsection{Sensor}
+
+\begin{description}
+\item[Kan vi få fat i data?]
+Ja.
+
+\item[Hvilke data giver sensoren?]
+Giver en enkelt talværdi i lux.
+
+\item[Er der begrænsninger?]
+Få enheder har en lys-sensor.
+
+\end{description}
+
+\subsection{Analyse}
+\begin{description}
+\item[Har vi data nok?]
+Hvis sensoren er til stede i enheden, bør det være muligt at skelne mellem tændt og slukket lys.
+Afhængigt af kvaliteten af sensoren, kan der skelnes mellem forskellige lysniveauer.
+
+\item[Hvilken data skal benyttes?]
+Talværdi i lux, der repræsenterer lysniveau.
+
+\item[Hvad er formål med analysen?]
+At afgøre om en person opholder sig meget i mørke eller ikke.
+
+Evt. til at afgøre om mobilen ligger i en lomme eller ligger fremme, så de andre logninger er relevante eller ej.
+
+\item[Hvordan kan det visualiseres?]
+
+\end{description}
+
+\subsection{Teknisk}
+\url{http://developer.android.com/guide/topics/sensors/sensors_environment.html}
+
+SensorManager bruges til at anmode om sensor til en Sensor.TYPE\_LIGHT, hvor der kan registreres en listener.
