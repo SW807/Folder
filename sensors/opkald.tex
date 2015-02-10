@@ -1,0 +1,24 @@
+\section{Opkald}
+Idéer til Opkald:
+\begin{description}[style=nextline]
+\item[Antal taget/ikke taget]
+\item[Varighed]
+\item[Andre?]
+\end{description}
+
+Sensor
+\begin{description}[style=nextline]
+\item[Kan vi få fat i data?] Ja, der er en CallLog i Android som kan bruges til dette, hvorfra man kan få data om de sidste \~500 calls.
+\item[Er der begrænsninger?] Man skal bruge permission. Der kan være regler vi skal tænke på med hensyn til persondataloven, men hvis vi aggregerer dataen og ikke gemmer individuelle calls kan vi nok undgå den problematik. 
+\item[Hvilke data giver sensoren?] Varighed, til og fra, om opkaldet blev taget eller ej, tidspunkt, sted(måske), type af kald(Indgående, udgående, misset) osv.
+\end{description}
+
+Analyse
+\begin{description}[style=nextline]
+\item[Har vi data nok?] Ja, den er begrænset til 500 opkald men vi kan gemme den relevante data i en lokal database og gør det ubegrænset(Persondataloven?)
+\item[Hvilke data skal benyttes?] Alle de data vi kan få fra loggen som giver mening at registrere, f.eks. varighed eller type.
+\item[Formål med analysen] Det primære formål med denne data er at se på social aktivitet, f.eks. hvor ofte og hvor længe brugeren snakker i telefon, eller om de f.eks. undgår opkald.
+\item[Ide til visualisering (?)] Kalender?
+\item[(kort oprids af fremgangsmåde)] N/A
+\item[(gem illustrationer og kilder)] http://developer.android.com/reference/android/provider/CallLog.html http://developer.android.com/reference/android/provider/CallLog.Calls.html
+\end{description}
