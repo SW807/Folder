@@ -1,4 +1,13 @@
 \section{Brug af mobil}
+Brugen af ens mobiltelefon er hvordan man benytter sin telefon, i forhold til hvilket applikaitoner der er åbne.
+
+\subsection{Hvilke applikationer er aktive når brugeren har skærmen tændt og i hvor lang tid}
+Man kan ud fra hvilket applikationer der er aktive og hvor lang tid brugeren bruger på denne aktivitet, kan det give et indblik i hvordan selve personen har det på den pågældende dag.
+Her tænkes der på hvis en person bruger din mobil telefon på en masse sociale ting, som f.eks. SMS, facebook osv. kan dette indikere at personen har det godt socialt, men hvis vedkommende pludseligt slet ikke benytter sig af nogen form for sociale applikationer kan dette indikere en ændring i vedkommendes sindstilstand.
+Ydermere, kan man i samarbejde med GPS, se hvordan vedkommende er de forskellige steder, hvis f.eks. at vedkommende normalt aldrig bruger sin mobil telefon på en bestemt lokation men pludseligt begynder at bruge den meget på den bestemte lokation kan dette muligvis også indikere en ædnring i sindstilstanden.
+For at visualisere dette nemt for brugeren kan man sammenligne forskellige perioder med hinanden, samt se hvilket applikationer der bliver brugt mest osv.
+
+\begin{comment}
 Idéer til brug af mobil:
 \begin{description}[style=nextline]
 \item[Hvilke applikationer er aktive når brugeren har skærmen tændt?]
@@ -8,8 +17,8 @@ Idéer til brug af mobil:
 
 Sensor
 \begin{description}[style=nextline]
-\item[Kan vi få fat i data?] Vi kan få fat i om skærmen er tændt, og hvilken applikation er i brug på tidspunktet.
-\item[Er der begrænsninger?] Man skal bruge permissions. Det lyder til at den primære metode til at få fat i den aktive applikation er en debugging metode og kan ikke bruges i den nyeste version af Android(Lollipop).
+\item[Kan vi få fat i data?] Vi kan få fat i om skærmen er tændt, og hvilken applikation er i brug på tidspunktet. Vi kan få en log over brug af apps fra UsageStats(see below).
+\item[Er der begrænsninger?] Man skal bruge permissions. Det lyder til at den primære metode til at få fat i den aktive applikation er en debugging metode og kan ikke bruges i den nyeste version af Android(Lollipop). UsageStats kan sikkert bruges.
 \item[Hvilke data giver sensoren?] Om skærmen er tændt, hvilke applikationer er i brug.
 \end{description}
 
@@ -28,4 +37,7 @@ N/A.
 \item[(gem illustrationer og kilder)] 
 Se om skærmen er tændt: http://developer.android.com/reference/android/content/Intent.html\#ACTION\_SCREEN\_OFF http://developer.android.com/reference/android/view/Display.html#getState() 
 Se hvilken applikation er i brug: http://stackoverflow.com/questions/3873659/android-how-can-i-get-the-current-foreground-activity-from-a-service
+Dedikeret log:
+https://developer.android.com/reference/android/app/usage/UsageStats.html
 \end{description}
+\end{comment}

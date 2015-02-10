@@ -1,40 +1,16 @@
 \section{Skærm tændt}
+PowerManager kan fortælle en service når skærmen bliver tændt eller slukket. Der er ingen begrænsninger. Data er events hvor skærmen bliver tændt eller slukket.
 
-\subsection{Sensor}
+\subsection{Hvor meget man har sin telefon tændt}
+Idéen er at vide hvor ofte telefonens skærm tændes eller slukkes og i hvor lang tid den har været tændt eller slukket. På denne måde kan der holdes øje med om mobilen bliver ignoreret hvis skærmen tændes med en lav frekvens eller om der holdes øje med noget bestemt ved høj frekvens eller lav tændetid. 
 
-\begin{description}
-\item[Kan vi få fat i data?]
-Ja, det er muligt at se om skærmen tændes eller slukkes.
+\subsection{Søvn længde}
+Man kunne måske også antage søvnlængde baseret på hvornår mobilen slukkes sidste gang om aftenen og tændes første gang om morgenen. 
 
-\item[Hvilke data giver sensoren?]
-Om skærmen er tændt eller slukket, samt notifikation om hvornår dette sker.
-
-\item[Er der begrænsninger?]
-Nej.
-
-\end{description}
-
-\subsection{Analyse}
-\begin{description}
-\item[Har vi data nok?]
-Ja.
-
-\item[Hvilken data skal benyttes?]
-Der skal logges hver gang skærm tændes/slukkes, og hvor ofte skærmen var tændt.
-
-\item[Hvad er formål med analysen?]
-At se hvor ofte mobilen tændes/slukkes og i hvor lang tid.
-På denne måde kan der holdes øje med om mobilen bliver ignoreret (lav frekvens), eller om der holdes øje med noget bestemt (ved høj frekvens og lav tændetid).
-
-Der kunne også antages søvnlængde, ud fra hvornår mobilen slukkes sidste gang om aftenen, og tændes første gang om morgenen.
-
-Den kunne også kombineres med fx. accelerometer, så der kun måles rystelser så længe skærmen er tændt (antager at den er i hånden på bruger).
+\subsection{Kombinationer}
+Dette kunne også kombineres med f.eks accelerometer så der kun måles rystelser så længe skærmen er tændt hvor man antager at den er i hånden på brugeren.
 
 Kilde: \url{https://gupea.ub.gu.se/handle/2077/28245}
-
-\item[Hvordan kan det visualiseres?]
-
-\end{description}
 
 \subsection{Teknisk}
 Der sker to intents ACTION\_SCREEN\_ON og ACTION\_SCREEN\_OFF, dog indikerer disse kun om skærmen er interaktiv, derudover skal aflæses Display.getState() for at få den egentlige tændt/slukket tilstand.
