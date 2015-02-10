@@ -1,26 +1,26 @@
 \section{Accelerometer}
-Idéer til accelerometer:
-\begin{description}[style=nextline]
-\item[Gangart]
-\item[Rystelser]
-\item[Aktivitetsniveau]
-\item[Nattesøvn]
-\end{description}
 
-Sensor
-\begin{description}[style=nextline]
-\item[Kan vi få fat i data?] Ja, de er tilgængelig fra MotionSensor.
-\item[Er der begrænsninger?] Umiddelbart ingen begrænsninger.
-\item[Hvilke data giver sensoren?] Acceleration i x,y,z akserne.
-\end{description}
+MotionSensor giver adgang til accelerometret der angiver accelerationen i x,y,z retningerne.
 
-Analyse
-\begin{description}
-\item[Har vi data nok?] Til gangart tror vi ikke der er data nok, men til rystelser og aktivitetsniveau er der nok til at analysere på. Til nattesøvn er der allerede flere applikationer som implementere dette, så det er også muligt.
-\item[Hvilke data skal benyttes?] For gangart skal man muligvis også benytte gyro sensor i sammensættelse med acceleration endvidere kan det være at man skal vide hvilken retning tyngdekræften trækker. Til rysteler og aktivitetsniveau er det nok med at bare bruge accelerometer, da vi baseret på den kan se om de bevæger telefonen(Dog med at i nogle situationer kan brugeren snyde hvis de bare leger med telefonen meget), det er nok svære at se hvor meget de nu bevæger sig(f.eks om de løber eller går). 
-\item[Formål med analysen] Baseret på det vi har hørt fra Morten, er motion og aktivitet vigtigt for personer med psykiske sygdomme og hvis de ikke rører på sig særlig meget kan det være en indikator for hvilken slags sinds situation de befinder sig i.
-\item[Ide til visualisering (?)] Normal 2 dimensionel graf som viser aktivitets niveau over flere dage, uger, måneder. Muligivis en kalender der hvis hvor aktiv man har været på en bestemt dato, så en dato man har været meget aktiv er grøn, og en dato hvor man har været meget lidt aktiv er datoen rød.
-\item[(kort oprids af fremgangsmåde)] Hvis det skal bruges til at tracke hvordan en person bevæger sig, kan man bruge et bayesiansk netværk der benytter sig af de fysiskelove, hvor gyroskopet kan være meget behjælpelig. Ved rystelser, kan man se på hvor meget personer ryster i dagligdagen, og derefter se om personen ryster mere på nogle bestemte tidspunkter. For aktivitetsniveau kan man på hvor meget og ofte at man accelerer/deaccelerer, og udfra dette bedømme om man dyrker noget aktivt.
-\item[(gem illustrationer og kilder)] \includegraphics{graphics/aktivitet_billed}. Se muligvis på følgende kilder for information om sensors i Android: http://developer.android.com/reference/android/hardware/SensorManager.html http://developer.android.com/reference/android/hardware/Sensor.html 
+\subsection{Gangart}
+Vi forestiller os at man kan analysere på patientens gangart for at se om patienten går i et normalt tempo eller om patienten slæber hen ad gulvet.
+For at finde dette er det muligvis nødvendigt at benytte gyro sensoren sammen med accelerometret.
+Endvidere kan det være at man skal vide hvilken retning tyngdekræften trækker.
+
+\subsection{Aktivitetsniveau}
+Baseret på det vi har hørt fra Morten, er motion og aktivitet vigtigt for personer med psykiske sygdomme og hvis de ikke rører på sig særlig meget kan det være en indikator for hvilken slags sinds situation de befinder sig i.
+For at estimere patientens aktivitetsniveau kan accelerometret bruges, da vi baseret på den kan se om de bevæger telefonen. 
+
+\subsection{Nattesøvn}
+Accelerometret kan også benyttes til at overvåge patientens nattesøvn og derved undersøge om den er rolig eller meget forstyrret.
+
+
+\subsection{Visualisering} Normal 2 dimensionel graf som viser aktivitets niveau over flere dage, uger, måneder. Muligivis en kalender der hvis hvor aktiv man har været på en bestemt dato, så en dato man har været meget aktiv er grøn, og en dato hvor man har været meget lidt aktiv er datoen rød.
+
+\includegraphics{graphics/aktivitet_billed}
+
+\subsection{Kort oprids af fremgangsmåde} Hvis det skal bruges til at tracke hvordan en person bevæger sig, kan man bruge et bayesiansk netværk der benytter sig af de fysiskelove, hvor gyroskopet kan være meget behjælpelig. Ved rystelser, kan man se på hvor meget personer ryster i dagligdagen, og derefter se om personen ryster mere på nogle bestemte tidspunkter. For aktivitetsniveau kan man på hvor meget og ofte at man accelerer/deaccelerer, og udfra dette bedømme om man dyrker noget aktivt.
+
+\subsection{gem illustrationer og kilder} 
+Se muligvis på følgende kilder for information om sensors i Android: http://developer.android.com/reference/android/hardware/SensorManager.html http://developer.android.com/reference/android/hardware/Sensor.html 
 Se på følgende kilde for information om dead reckoning og hvordan det skal gøres baseret på sensors i en telefon: http://projekter.aau.dk/projekter/da/studentthesis/embedded-systems\%286026405d-4315-4112-9cd5-673f21b3c722\%29.html?dologin 
-\end{description}
