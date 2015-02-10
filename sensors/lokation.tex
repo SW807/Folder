@@ -1,32 +1,15 @@
 \section{Lokation}
+Man kan anmode lokation på et væld af måder, f.eks. få fat i den seneste lokation, anmode en enkelt opdatering, anmode flere opdatering. 
+Dette afhænger af rettigheder til brug af henholdsvis grov eller fin lokation, afhænger også på andre applikationers anmodninger og forbindelser. Det er muligt at sætte minimum og maksimum tid, men kan ikke garanteres at minimum overholdes. Hyppig opdatering af strømkrævende. 
+Data er en lokation(breddegrad, længdegrad, præcision, tidsstempel).
+
 Kilde: \url{https://developer.android.com/training/location/index.html}
 
-\subsection{Sensor}
+\subsection{Lokation og aktivitet}
+Dette kan bruges til at vide hvor brugeren er og hvor meget de bevæger sig(f.eks. til motion).
 
-\begin{description}
-\item[Kan vi få fat i data?]
-Ja, der kan anmodes om lokation på et væld af måder; seneste lokation, anmode enkelt opdatering, anmode flere opdateringer.
-Dette afhænger af rettigheder til brug af henholdsvis grov og/eller fin lokation.
-\item[Hvilke data giver sensoren?]
-Breddegrad, længdegrad, præcision i meter, højde i meter, retning i grader, dato-tidsstempel, hastighed i m/s, leverandør (GPS el. netværk).
-\item[Er der begrænsninger?]
-Opdateringer afhænger af andre apps' anmodninger, samt forbindelse(r).
-Det er muligt at sætte minimum og maksimum tid, men kan ikke garanteres at minimum overholdes.
-Hyppige opdateringer er strømkrævende.
-\end{description}
-
-\subsection{Analyse}
-\begin{description}
-\item[Har vi data nok?]
-Sikkert.
-\item[Hvilken data skal benyttes?]
-Breddegrad, længdegrad, præcision og datotidsstempel.
-Højde og hastighed er mindre anvendeligt, og er mere usikre (både ift. præcision og om der overhovedet er en værdi).
-\item[Hvad er formål med analysen?]
-Hvor meget man bevæger sig; hvor meget er man udenfor hjem/arbejde? Hvor meget opholder man sig hjemme? Hvor er man oftest (nøgle-lokationer, fx. venner, familie, værtshus)?
-\item[Hvordan kan det visualiseres?]
-
-\end{description}
+\subsection{Nøglelokation}
+Man kan finde ud af hvor meget man er ved nogle nøglelokationer, f.eks. hjem eller arbejde og udfra det finde ud af hvor meget man er udenfor hjem. Man kan finde ud af hvor man er oftest(venner, familie, hjem, værtshus).
 
 \subsection{Teknisk}
 Google Play Services (foretrukket) eller Android framework location APIs.
