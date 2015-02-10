@@ -9,7 +9,7 @@
 	Begrænsningen ligger i telefonsamtale perspektivet, da hvis man ser på Android telefoner generelt er det kun patientens stemme man kan optage, og således ikke den han ringer med.
 
 	\item[Hvilke data gives der?]
-	En lyd fil der kan bruges til efterfølgende analyse af bl.a. tonehøjde.
+	En lyd fil der kan bruges til efterfølgende analyse af bl.a. amplitude og pitch.
 
 \end{description}
 
@@ -26,12 +26,12 @@
 	En anden mulighed er at forske nærmere i at bruge stemmeanalyse til at diagnosticere sygdomme såsom maniodepression \citep{6346375}, eller andre sygdomme der har effekt på stemmen.
 
 	\item[Idé til visualisering]
-	Man kunne eksempelvis lave en graf med tonehøjde over tid, for at se om ens stemme udvikler sig på usædvanlig vis.
+	Man kunne eksempelvis lave en graf med pitch eller amplitude over tid, for at se om ens stemme udvikler sig på usædvanlig vis (snakker højt/hurtigt).
 	Et alternativ er et simpelt binært resultat til at afgøre om man har en given sygdom eller ej, evt. med et dertilhørende konfidensnivau.
 	\item[Oprids fremgangsmåde]
 	For parkinson syge, anskaf en mængde af træningsdata, byg classifier, brug denne til detektering af parkinsonsyge.
 	
-	Derudover kan mani muligvis detekteres ved at måle på tonehøjden og frekvensen, men kræver mere forskning på området \citep{6346375}.
-	Dog har de haft gode resultater med individuelle patienter, men det viser sig at tonehøjde ikke kan bruges generelt set til detektering af mani, det er noget man skal vurdere fra patient til patient.
+	Derudover kan mani muligvis detekteres ved at måle på amplituden og pitchen, men kræver mere forskning på området \citep{6346375}.
+	Dog har de haft gode resultater med individuelle patienter, men det viser sig at pitch ikke kan bruges generelt set til detektering af mani, det er noget man skal vurdere fra patient til patient.
 	
 \end{description}
