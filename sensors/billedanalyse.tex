@@ -12,21 +12,23 @@ Android har indbygget funktioner til at finde ansigter i et billede.
 Vi kan der efterfølgende skrive kode der genkender ansigter fra hinanden, og vi kan på den måde sikre os at vi kun analyserer billeder af ejeren(se første link).
 
 \subsection{Pupil reaktion}
-Vi forestiller os at vi kan lave en kort videosekvens hvor patienten bliver blitzet i perioden, for at analysere på pupillens reaktion til blitzen, se \cite{hoeks1993pupillary}.
+Vi forestiller os at vi kan lave en kort videosekvens hvor patienten bliver blitzet i perioden, for at analysere på pupillens reaktion til blitzen, se \citet{hoeks1993pupillary}.
+Konceptet illustreres i \cref{pupil}.
 Det er dog et problem at de fleste telefoner kun har blitz på bagsiden.
 \begin{figure}
 	\centering
 \includegraphics[width=0.7\textwidth]{pupil-dilation}
 \caption{Iris til venstre illustrerer hvordan øjet ser ud når videosekvensen starter. Iris i midten illustrerer hvordan pupillen trækker sig sammen når der blitzes. Billedet til højre viser hvordan pupillen udvider sig igen, det er det der måles på. Den røde stiplede linie viser afstanden.}
+\label{pupil}
 \end{figure}
 
 \subsection{Humør}
-
 Et billede af en patient kan analyseres for at finde patientens humør. 
 For at få en objektiv vurdering vurderes det at telefonen selv skal tage billeder i tilfældige tidsintervaller. 
-Se \cite{kulkarni2009facial}
+Se \citet{kulkarni2009facial} for en beskrivelse af analysen og \cref{humor} for en illustration af konceptet.
 \begin{figure}
 	\centering
 \includegraphics[width=0.5\textwidth]{humoer}
 \caption{En bruger er ved at bruge telefonen. Imens, uden at vedkommende ved det, tages der et billede vha. front kameraet. Det tjekkes at billedet er af telefonens ejer og derefter evalueres vedkommendes humør.}
+\label{humor}
 \end{figure}
