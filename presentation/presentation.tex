@@ -1,0 +1,75 @@
+\documentclass{beamer}
+\graphicspath{{../graphics/}}
+\usepackage{listings}
+\usepackage{ulem}
+\usepackage{subcaption}
+\captionsetup{compatibility=false}
+\usepackage[lined,commentsnumbered,linesnumbered]{algorithm2e}
+\usepackage{multicol}
+
+\usepackage{xcolor}
+
+\newcommand{\linespace}{\vspace{1em}}
+
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+  \setbeamertemplate{footline}[frame number]
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamercovered{transparent}
+  \usecolortheme{wolverine}
+}
+
+\AtBeginSection[]
+{
+   \begin{frame}
+        \frametitle{Content}
+        \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/show/hide]
+   \end{frame}
+}
+
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{times}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc,positioning,shapes.geometric}
+
+\usepackage{multirow}
+
+\title{Idéer til mobil-logning}
+
+\subtitle{I forbindelse med detektering af psykiatriske symptomer}
+
+\author{SW807 \\ SW808}
+
+\institute[Aalborg University]
+{
+  Software\\
+  Aalborg University}
+
+\date{18. februar 2015}
+
+\begin{document}
+
+% % % % % % % %
+% INTRODUCTION
+% % % % % % % %
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Content}
+    \tableofcontents[sectionstyle=show/show,subsectionstyle=hide/hide/hide]
+\end{frame}
+
+% % % % %
+% SLIDES
+% % % % %
+
+\input{slides/content}
+
+\end{document}
