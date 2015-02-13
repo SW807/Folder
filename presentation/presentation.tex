@@ -13,21 +13,12 @@
 
 \mode<presentation>
 {
-  \usetheme{Darmstadt}
+  \usetheme{rochester}
   \setbeamertemplate{footline}[frame number]
   \setbeamertemplate{navigation symbols}{}
   \setbeamercovered{transparent}
   \usecolortheme{wolverine}
 }
-
-\AtBeginSection[]
-{
-   \begin{frame}
-        \frametitle{Content}
-        \tableofcontents[sectionstyle=show/hide,subsectionstyle=show/show/hide]
-   \end{frame}
-}
-
 
 \usepackage[utf8]{inputenc}
 
@@ -61,14 +52,15 @@
   \titlepage
 \end{frame}
 
-\begin{frame}
-    \frametitle{Content}
-    \tableofcontents[sectionstyle=show/show,subsectionstyle=hide/hide/hide]
-\end{frame}
 
 % % % % %
 % SLIDES
 % % % % %
+
+\begin{frame}
+        \frametitle{Content}
+        \tableofcontents
+   \end{frame}
 
 \input{slides/content}
 
